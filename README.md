@@ -1,4 +1,7 @@
 # inHome-FullStack
+## DATABASE  
+![Alt Text](./back_end/db/inHome_SQL.png)
+
 ## PITCH
 
 - A real estate rental property managing web-app that allows for a landlord to sign up, manage their rental property, and invite/choose candidates/applicants. Once the landlord chooses a specific applicant to complete a lease contract, the tenant has access to viewing the lease and sending in repair requests or general inquiries to the landlord while a tenant at the property. 
