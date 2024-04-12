@@ -3,22 +3,18 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth import login, logout, authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.status import (
-    HTTP_200_OK,
-    HTTP_204_NO_CONTENT,
-    HTTP_201_CREATED,
-    HTTP_400_BAD_REQUEST
-)
+from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.models import Token
-from .models import User
+from .serializers import UserSerializer, User
 
 # Create your views here.
+
 class Sign_up(APIView):
     def post(self, request):
         data = request.data.copy()
-        data['username'] = request.data.get("username", request.data.get("email"))
+        data['username'] = request.data.get("email")
         new_user = User(**data)
         try:
             new_user.full_clean()
@@ -26,19 +22,33 @@ class Sign_up(APIView):
             new_user.save()
             login(request, new_user)
             token = Token.objects.create(user = new_user)
-            return Response({"User":new_user.email, "token":token.key}, status=HTTP_201_CREATED)
+            return Response({"User":new_user.email, "token":token.key}, status=status.HTTP_201_CREATED)
         except ValidationError as e:
-            return Response(e, status=HTTP_400_BAD_REQUEST)
+            return Response(e, status=status.HTTP_400_BAD_REQUEST)
 
 class Log_in(APIView):
     def post(self, request):
         data = request.data
-        user = authenticate(username=data.get("email"), password=data.get("password"))
+        email = data.get("email")
+        password = data.get("password")
+        user = authenticate(request, username=email, password=password)  # Note the use of username=email
         if user:
             Token.objects.filter(user=user).delete()  # Invalidate the old token
             token = Token.objects.create(user=user)  # Create a new token
-            return Response({"token": token.key}, status=HTTP_200_OK)
-        return Response("Invalid credentials", status=HTTP_400_BAD_REQUEST)
+            login(request, user)
+            return Response({"token": token.key}, status=status.HTTP_200_OK)
+        return Response({"detail": "Invalid credentials"}, status=status.HTTP_400_BAD_REQUEST)
+        # data = request.data.copy()
+        # print(data)
+        # user = authenticate(username=data['email'], password=data['password'])
+        # print(UserSerializer(user).data)
+        # return Response(UserSerializer(user).data)
+        # if user:
+        #     login(request, user)
+        #     # Token.objects.filter(user=user).delete()  # Invalidate the old token
+        #     token = Token.objects.create(user=user)  # Create a new token
+        #     return Response({"token": token.key}, status=status.HTTP_200_OK)
+        # return Response("Invalid credentials", status=status.HTTP_400_BAD_REQUEST)
 
 
         # data = request.data.copy()
@@ -59,7 +69,7 @@ class Log_out(TokenReq):
     def post(self, request):
         request.user.auth_token.delete()
         logout(request)
-        return Response(status=HTTP_204_NO_CONTENT)
+        return Response({"detail": "You've been logged out sucessfully."},status=status.HTTP_204_NO_CONTENT)
     
 
 class Info(TokenReq):
@@ -69,10 +79,12 @@ class Info(TokenReq):
             return Response({
                 "first_name": user.first_name,
                 "last_name": user.last_name,
-                "email": user.email
-            }, status=HTTP_200_OK)
+                "email": user.email,
+                "password": user.password,
+                "username": user.username
+            }, status=status.HTTP_200_OK)
         except ValidationError as e:
-            return Response(e, status=HTTP_400_BAD_REQUEST)
+            return Response(e, status=status.HTTP_400_BAD_REQUEST)
 
         # try:
         #     data = request.data.copy()
@@ -83,3 +95,18 @@ class Info(TokenReq):
         #     return Response({f"first_name: {ruser.first_name}, last_name: {ruser.last_name}, email:{ruser.email}"},status=HTTP_200_OK)
         # except ValidationError as e:
         #     return Response(e, status=HTTP_400_BAD_REQUEST)
+
+    def put(self, request):
+        serializer = UserSerializer(request.user, data=request.data, partial=True)
+        if serializer.is_valid():
+            user = serializer.save()
+            if 'password' in request.data:
+                user.set_password(request.data['password'])
+                user.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request):
+        user = request.user
+        user.delete()
+        return Response({"detail": "User account has been deleted."}, status=status.HTTP_204_NO_CONTENT)

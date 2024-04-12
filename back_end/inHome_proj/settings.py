@@ -42,7 +42,11 @@ INSTALLED_APPS = [
     'user_app',
     'property_app',
     'apartment_app',
-    'tenancy_app'
+    'tenancy_app',
+    'application_app',
+    'lease_agreement_app',
+    'maintenance_app',
+    'transaction_app',
 ]
 
 MIDDLEWARE = [
