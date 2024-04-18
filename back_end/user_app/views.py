@@ -8,57 +8,70 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.models import Token
 from .serializers import UserSerializer, User
+import requests
 
-# Create your views here.
 
-class Sign_up(APIView):
+
+class Register(APIView):
     def post(self, request):
         data = request.data.copy()
-        data['username'] = request.data.get("email")
+        email = data.get("email")
+        password = data.get("password")  
+        email_verification_response = self.verify_email_address(email)
+        if not email_verification_response.get("isValid"):
+            return Response({
+                "error": "Invalid email address",
+                "details": email_verification_response
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        data['username'] = email
         new_user = User(**data)
         try:
             new_user.full_clean()
-            new_user.set_password(data.get("password"))
+            new_user.set_password(password)  
             new_user.save()
-            login(request, new_user)
-            token = Token.objects.create(user = new_user)
-            return Response({"User":new_user.email, "token":token.key}, status=status.HTTP_201_CREATED)
+            login(request, new_user) 
+            token = Token.objects.create(user=new_user)
+            return Response({
+                "User": new_user.email,
+                "token": token.key,
+                "role": new_user.role,
+                "email-verification api response": email_verification_response
+            }, status=status.HTTP_201_CREATED)
         except ValidationError as e:
             return Response(e, status=status.HTTP_400_BAD_REQUEST)
 
+    def verify_email_address(self, email_address):
+       
+        api_key = 'bdc_9b857cf25a6a4ab7b1c5bc0fe4064498'
+        params = {
+            "emailAddress": email_address,
+            "key": api_key
+        }
+        response = requests.get("https://api.bigdatacloud.net/data/email-verify", params=params)
+        
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return {"isValid": False, "message": "Failed to verify email address"}
+
 class Log_in(APIView):
-    def post(self, request):
+   def post(self, request):
         data = request.data
+        # print("Login attempt with data:", data)  
         email = data.get("email")
         password = data.get("password")
-        user = authenticate(request, username=email, password=password)  # Note the use of username=email
+        user = authenticate(request, username=email, password=password)
         if user:
-            Token.objects.filter(user=user).delete()  # Invalidate the old token
-            token = Token.objects.create(user=user)  # Create a new token
+            # print("User authenticated:", user.username) 
+            Token.objects.filter(user=user).delete()
+            token = Token.objects.create(user=user)
             login(request, user)
             return Response({"token": token.key}, status=status.HTTP_200_OK)
-        return Response({"detail": "Invalid credentials"}, status=status.HTTP_400_BAD_REQUEST)
-        # data = request.data.copy()
-        # print(data)
-        # user = authenticate(username=data['email'], password=data['password'])
-        # print(UserSerializer(user).data)
-        # return Response(UserSerializer(user).data)
-        # if user:
-        #     login(request, user)
-        #     # Token.objects.filter(user=user).delete()  # Invalidate the old token
-        #     token = Token.objects.create(user=user)  # Create a new token
-        #     return Response({"token": token.key}, status=status.HTTP_200_OK)
-        # return Response("Invalid credentials", status=status.HTTP_400_BAD_REQUEST)
+        else:
+            # print("Failed authentication for:", email) 
+            return Response({"detail": "Invalid credentials"}, status=status.HTTP_400_BAD_REQUEST)
 
-
-        # data = request.data.copy()
-        # data['username'] = request.data.get("username", request.data.get("email"))
-        # user = authenticate(username=data.get("username"), password=data.get("password"))
-        # if user:
-        #     login(request, user)
-        #     token, created = Token.objects.get_or_create(user = user)
-        #     return Response({"User":user.email, "token":token.key}, status=HTTP_200_OK)
-        # return Response("No user matching credentials", status=HTTP_400_BAD_REQUEST)
 
 class TokenReq(APIView):
 
@@ -81,20 +94,11 @@ class Info(TokenReq):
                 "last_name": user.last_name,
                 "email": user.email,
                 "password": user.password,
-                "username": user.username
+                "username": user.username,
+                "role":user.role
             }, status=status.HTTP_200_OK)
         except ValidationError as e:
             return Response(e, status=status.HTTP_400_BAD_REQUEST)
-
-        # try:
-        #     data = request.data.copy()
-        #     ruser = request.user
-        #     ruser.email = data.get("email", ruser.email)
-        #     ruser.full_clean()
-        #     ruser.save()
-        #     return Response({f"first_name: {ruser.first_name}, last_name: {ruser.last_name}, email:{ruser.email}"},status=HTTP_200_OK)
-        # except ValidationError as e:
-        #     return Response(e, status=HTTP_400_BAD_REQUEST)
 
     def put(self, request):
         serializer = UserSerializer(request.user, data=request.data, partial=True)
