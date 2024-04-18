@@ -9,6 +9,8 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.models import Token
 from .serializers import UserSerializer, User
 import requests
+from inHome_proj.settings import env
+
 
 
 
@@ -43,7 +45,7 @@ class Register(APIView):
 
     def verify_email_address(self, email_address):
        
-        api_key = 'bdc_9b857cf25a6a4ab7b1c5bc0fe4064498'
+        api_key = env.get('API_KEY')
         params = {
             "emailAddress": email_address,
             "key": api_key
