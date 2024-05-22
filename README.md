@@ -18,6 +18,5 @@
 
 ## APIs 
 
-- Zillow API for real estate data 
-- Project noun API for icons and front end UI
-- Trulia API for rental listings
+- SmartyStreets Address Validation API  
+- BigCloudData email address and server validation API
