@@ -10,7 +10,7 @@
 
 - Users on either side will create profiles and interact with forms to fill out and save in a database. A landlord will be able to select optios for a lease contract that details what is or isn't allowed. 
 
-- The applicant/tenant will be able to add details to an applicaiton, update any personla contact information, create repair requests or service requests, track the requests, and close or delete. 
+- The applicant/tenant will be able to add details to an applicaiton, update any personal contact information, create repair requests or service requests, track the requests, and close or delete. 
 
 ## AUTHENTICATION 
     
