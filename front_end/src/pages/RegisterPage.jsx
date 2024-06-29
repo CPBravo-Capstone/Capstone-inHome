@@ -34,8 +34,9 @@ export default function Register() {
                 user: response.data.user,
                 token: response.data.token
             });
-            window.location.reload()
+            
             navigate(response.data.role === 'landlord' ? '/manager/' : '/tenant/')
+            window.location.reload()
         } catch (error) {
             console.error('Registration error:', error.response);
         }
