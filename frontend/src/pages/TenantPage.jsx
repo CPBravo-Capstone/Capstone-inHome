@@ -35,7 +35,6 @@ export default function Tenant() {
     };
     fetchUserInfo();
   }, [navigate]);
-
   const handleChange = (event) => {
     const { id, value } = event.target;
     setUserInfo((prevState) => ({

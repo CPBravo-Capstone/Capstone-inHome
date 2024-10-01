@@ -63,7 +63,7 @@ jobs:
       # Step 3: Install frontend dependencies
       - name: Install frontend dependencies
         run: |
-          cd front_end
+          cd frontend
           npm install
 
       # Step 5: Build frontend

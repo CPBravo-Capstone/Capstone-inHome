@@ -24,7 +24,6 @@ function ApartmentListPage() {
         fetchPropertyDetails();
         fetchApartments();
     }, [propertyId]);
-
     const fetchPropertyDetails = async () => {
         try {
             const response = await api.get(`property/${propertyId}/`);
