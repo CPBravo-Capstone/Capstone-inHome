@@ -9,7 +9,7 @@ Welcome to **inHome**, a cloud-native application powered by AWS, Kubernetes, Do
 ![inHome cloud diagram](diagram.png)
 
 ## DATABASE  
-![Alt Text](./back_end/db/inHome_SQL.png)
+![Alt Text](./backend/db/inHome_SQL.png)
 
 ## 🚀 Components
 
