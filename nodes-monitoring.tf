@@ -18,7 +18,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",          # Namespace for EC2 metrics
               "CPUUtilization",   # Metric to monitor CPU usage
               "InstanceId",       # Dimension for the instance ID
-              "i-0c0ee52e3978179f1" # Variable for the EC2 instance ID [MODIFY]
+              "i-07d066aa668c5725a" # Variable for the EC2 instance ID [MODIFY]
             ]
           ]
           period = 60
@@ -46,7 +46,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "DiskReadOps",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -74,7 +74,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "NetworkPacketsOut",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -102,7 +102,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "DiskWriteBytes",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -130,7 +130,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "StatusCheckFailed_Instance",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -158,7 +158,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "DiskWriteOps",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -186,7 +186,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "NetworkOut",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -214,7 +214,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "DiskReadBytes",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -242,7 +242,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "NetworkPacketsIn",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -270,7 +270,7 @@ resource "aws_cloudwatch_dashboard" "eks_ec2_nodes_dashboard" {
               "AWS/EC2",
               "NetworkIn",
               "InstanceId",
-              "i-0c0ee52e3978179f1" # [MODIFY]
+              "i-07d066aa668c5725a" # [MODIFY]
             ]
           ]
           period = 60
@@ -317,7 +317,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization_high" {
   alarm_description  = "This alarm fires when the CPU utilization exceeds 50%."
 
   dimensions = {
-    InstanceId = "i-0c0ee52e3978179f1"  # [MODIFY]
+    InstanceId = "i-07d066aa668c5725a"  # [MODIFY]
   }
 
   alarm_actions = [aws_sns_topic.eks_cpu_utilization.arn]
