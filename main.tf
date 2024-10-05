@@ -183,11 +183,20 @@ resource "aws_subnet" "my_subnet" {
   cidr_block              = "10.0.${count.index}.0/24" # Starts at 0 and ends with 1
   availability_zone       = element(data.aws_availability_zones.available.names, count.index)
   map_public_ip_on_launch = true
+
+  tags = {
+    Name                                    = "${var.eks-cluster-name}-subnet-${count.index + 1}"  # Unique name for each subnet
+    "kubernetes.io/cluster/${var.eks-cluster-name}" = "owned"  # Tag for EKS
+    # "kubernetes.io/role/elb-subnet"       = "1"  # Optional: Tag for ELB subnet if using Load Balancers
+    # "kubernetes.io/role/internal-elb-subnet" = "1"  # Optional: Tag for internal ELB subnet
+  }
 }
 
 //// Create VPC for EKS ////
 resource "aws_vpc" "inHome_vpc" {
   cidr_block = "10.0.0.0/16"
+  enable_dns_support   = true  // Enable DNS support
+  enable_dns_hostnames = true  // Enable DNS hostnames
 }
 
 //// Create IGW for EKS ////
@@ -226,7 +235,7 @@ resource "aws_eks_node_group" "inHome_node_group" {
   }
 
   # Optional: specify the instance types
-  instance_types = ["t2.micro"]  # Choose instance type based on your application needs
+  instance_types = ["t2.small"]  # Choose instance type based on your application needs
 
   tags = {
     Name                         = "${var.eks-cluster-name}-node"
@@ -259,6 +268,11 @@ resource "aws_iam_role" "inHome_eks_role" {
 //// Attach policies to the EKS Cluster role ////
 resource "aws_iam_role_policy_attachment" "AmazonEKSClusterPolicy" { # Allows EKS to create and manage the control plane and worker nodes
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+  role       = aws_iam_role.inHome_eks_role.name
+}
+
+resource "aws_iam_role_policy_attachment" "AmazonEKSVPCPolicy" { # Allows EKS to create and manage the control plane and worker nodes
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
   role       = aws_iam_role.inHome_eks_role.name
 }
 
@@ -296,6 +310,11 @@ resource "aws_iam_role_policy_attachment" "AmazonSSMManagedInstanceCore" { # Ena
   role       = aws_iam_role.eks_node_role.name
 }
 
+resource "aws_iam_role_policy_attachment" "ecr_read_only" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+  role       = aws_iam_role.eks_node_role.name
+}
+
 ////////////////////////////////////////////// EKS Cluster Autoscaling //////////////////////////////////////////////
 
 //// Created Cluster Autoscaler Policy ////
@@ -329,3 +348,131 @@ resource "aws_iam_role_policy_attachment" "cluster_autoscaler_attachment" {
   policy_arn = aws_iam_policy.cluster_autoscaler_policy.arn
   role       = aws_iam_role.eks_node_role.name
 }
+
+////////////////////////////////////////////// EBS //////////////////////////////////////////////
+
+//// Created EBS Policy ////
+resource "aws_iam_policy" "cluster_ebs_policy" {
+  name        = "ClusterEBSPolicy"
+  description = "Policy for EBS"
+
+  policy = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateVolume",
+                "ec2:AttachVolume",
+                "ec2:DeleteVolume",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeVolumeStatus",
+                "ec2:ModifyVolume",
+                "ec2:CreateTags"
+            ],
+            "Resource": "*"
+        }
+    ]
+})
+}
+
+//// Attach EBS policy to existing eks node role ////
+resource "aws_iam_role_policy_attachment" "cluster_ebs_attachment" {
+  policy_arn = aws_iam_policy.cluster_ebs_policy.arn
+  role       = aws_iam_role.eks_node_role.name
+}
+
+////////////////////////////////////////////// Lambda Function //////////////////////////////////////////////
+
+//// Create Lambda function ////
+resource "aws_lambda_function" "rds_snapshot" {
+  function_name = "RdsSnapshotFunction"
+  handler       = "lambda_function.lambda_handler"  # Change as per your code
+  runtime       = "python3.8"  # Choose your preferred runtime
+
+  environment {
+    variables = {
+      DB_INSTANCE_IDENTIFIER = aws_db_instance.postgresql.id
+    }
+  }
+  
+
+  s3_bucket = aws_s3_bucket.tf_s3_state.bucket  # Use your S3 bucket
+  s3_key    = "my-functions/lambda_function.py.zip"          # [MODIFY] Path to your Lambda code zip file
+
+  role = aws_iam_role.lambda_execution_role.arn
+}
+
+
+
+//// Create Eventbridge Rule ////
+resource "aws_cloudwatch_event_rule" "midnight_event" {
+  name                = "MidnightSnapshotRule"
+  schedule_expression = "cron(0 0 * * ? *)"  # Every day at midnight UTC
+}
+
+resource "aws_cloudwatch_event_target" "lambda_target" {
+  rule      = aws_cloudwatch_event_rule.midnight_event.name
+  target_id = "RdsSnapshotLambda"
+  arn       = aws_lambda_function.rds_snapshot.arn
+}
+
+resource "aws_lambda_permission" "allow_eventbridge" {
+  statement_id  = "AllowExecutionFromEventBridge"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.rds_snapshot.function_name
+  principal     = "events.amazonaws.com"
+  source_arn    = aws_cloudwatch_event_rule.midnight_event.arn
+}
+
+
+//// Create Lambda IAM Role ////
+resource "aws_iam_role" "lambda_execution_role" {
+  name = "rds_snapshot_lambda_role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Action = "sts:AssumeRole",
+      Principal = {
+        Service = "lambda.amazonaws.com"
+      },
+      Effect = "Allow",
+      Sid = ""
+    }]
+  })
+}
+
+//// Attach Lambda policy to IAM Role ////
+resource "aws_iam_policy_attachment" "lambda_rds_snapshot_policy" {
+  name       = "lambda_rds_snapshot_policy_attachment"
+  roles      = [aws_iam_role.lambda_execution_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"  # For CloudWatch logs
+}
+
+//// RDS snapshot policy /////
+resource "aws_iam_policy" "rds_snapshot_policy" {
+  name        = "RDS_Snapshot_Policy"
+  description = "Policy for creating RDS snapshots"
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "rds:CreateDBSnapshot"
+        ],
+        Resource = "*"
+      }
+    ]
+  })
+}
+
+//// Attachig RDS snapshot policy to IAM Role ////
+resource "aws_iam_role_policy_attachment" "attach_rds_snapshot_policy" {
+  role       = aws_iam_role.lambda_execution_role.name
+  policy_arn = aws_iam_policy.rds_snapshot_policy.arn
+}
+
