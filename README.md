@@ -25,7 +25,6 @@ Welcome to **inHome**, a cloud-native application powered by AWS, Kubernetes, Do
 
 ### 🎛 Load Balancers
 1. **Application Load Balancer (ALB)**: Distributes incoming application traffic across EC2 instances and multiple Availability Zones.
-2. **Network Load Balancer (NLB)**: Handles backend traffic for high performance and low latency.
 
 ### ☸️ EKS Cluster
 - **Kubernetes Management**: Manages our Kubernetes deployments and services.
