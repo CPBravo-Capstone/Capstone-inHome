@@ -1,0 +1,799 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/v1/property/?page=NaN&sort_by=street&search= HTTP/1.1" 200 2
+"GET /api/v1/property/?page=NaN&sort_by=street&search= HTTP/1.1" 200 2
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 2
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 2
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 2
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 2
+Received POST request data: {'street': '30 S 16th Ave', 'city': 'Maywood', 'state': 'IL', 'zip': '60153'}
+Sending request to Smarty API with params: {'auth-id': 'c6d973fe-d72d-6a3b-6eff-f272b45d3ec2', 'auth-token': 'Qt86ERi2C4FBoki5pWlR', 'street': '30 S 16th Ave', 'city': 'Maywood', 'state': 'IL', 'zipcode': '60153', 'candidates': 1}
+Received response from Smarty API: 402
+Failed to validate address. Response: {"errors":[{"id":1588026162,"message":"Active subscription required (1588026162): The optional license value supplied (if any) was valid and understood, but the account does not have the necessary active subscription to allow this operation to continue."}]}
+Bad Request: /api/v1/property/
+Bad Request: /api/v1/property/
+"POST /api/v1/property/ HTTP/1.1" 400 38
+"POST /api/v1/property/ HTTP/1.1" 400 38
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/property_app/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received POST request data: {'street': '30 S 16th Ave', 'city': 'Maywood', 'state': 'IL', 'zip': '60153'}
+"POST /api/v1/property/ HTTP/1.1" 201 120
+"POST /api/v1/property/ HTTP/1.1" 201 120
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 122
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 122
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 122
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 122
+Received POST request data: {'street': '123 Main St', 'city': 'New York', 'state': 'NY', 'zip': '12345'}
+"POST /api/v1/property/ HTTP/1.1" 201 119
+"POST /api/v1/property/ HTTP/1.1" 201 119
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 242
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 242
+"OPTIONS /api/v1/property/?page=1&sort_by=state&search= HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/?page=1&sort_by=state&search= HTTP/1.1" 200 0
+"GET /api/v1/property/?page=1&sort_by=state&search= HTTP/1.1" 200 242
+"GET /api/v1/property/?page=1&sort_by=state&search= HTTP/1.1" 200 242
+"OPTIONS /api/v1/property/?page=NaN&sort_by=state&search= HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/?page=NaN&sort_by=state&search= HTTP/1.1" 200 0
+"GET /api/v1/property/?page=NaN&sort_by=state&search= HTTP/1.1" 200 242
+"GET /api/v1/property/?page=NaN&sort_by=state&search= HTTP/1.1" 200 242
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 242
+"GET /api/v1/property/?page=1&sort_by=street&search= HTTP/1.1" 200 242
+Received POST request data: {'street': '30 S 16th Ave', 'city': 'Maywood', 'state': 'IL', 'zip': '60153'}
+"POST /api/v1/property/ HTTP/1.1" 201 120
+"POST /api/v1/property/ HTTP/1.1" 201 120
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 363
+"GET /api/v1/property/ HTTP/1.1" 200 363
+"OPTIONS /api/v1/property/1/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/1/ HTTP/1.1" 200 0
+"DELETE /api/v1/property/1/ HTTP/1.1" 204 0
+"DELETE /api/v1/property/1/ HTTP/1.1" 204 0
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 242
+"GET /api/v1/property/ HTTP/1.1" 200 242
+"OPTIONS /api/v1/property/3/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/3/ HTTP/1.1" 200 0
+"DELETE /api/v1/property/3/ HTTP/1.1" 204 0
+"DELETE /api/v1/property/3/ HTTP/1.1" 204 0
+Received POST request data: {'street': '5678 W Prairie Road', 'city': 'Boston', 'state': 'MA', 'zip': '92013'}
+"POST /api/v1/property/ HTTP/1.1" 201 125
+"POST /api/v1/property/ HTTP/1.1" 201 125
+"OPTIONS /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/2/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/2/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 0
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 2
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 2
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 2
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 2
+"OPTIONS /api/v1/apartment/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/ HTTP/1.1" 200 0
+"POST /api/v1/apartment/ HTTP/1.1" 201 121
+"POST /api/v1/apartment/ HTTP/1.1" 201 121
+Received POST request data: {'id': 1, 'unit_number': '1', 'bedroom': 3, 'bathroom': 2, 'monthly_rent': '3200.00', 'lease_length': 12, 'tenant': None, 'property': 2}
+Serializer errors: {'street': [ErrorDetail(string='This field is required.', code='required')], 'city': [ErrorDetail(string='This field is required.', code='required')], 'state': [ErrorDetail(string='This field is required.', code='required')], 'zip': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/v1/property/
+Bad Request: /api/v1/property/
+"POST /api/v1/property/ HTTP/1.1" 400 143
+"POST /api/v1/property/ HTTP/1.1" 400 143
+- Broken pipe from ('127.0.0.1', 56894)
+- Broken pipe from ('127.0.0.1', 56894)
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"OPTIONS /api/v1/apartment/all/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/all/ HTTP/1.1" 200 0
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 123
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 123
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+Unauthorized: /api/v1/property/
+Unauthorized: /api/v1/property/
+"GET /api/v1/property/ HTTP/1.1" 401 58
+"GET /api/v1/property/ HTTP/1.1" 401 58
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+- Broken pipe from ('127.0.0.1', 52952)
+- Broken pipe from ('127.0.0.1', 52952)
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/property/2/ HTTP/1.1" 200 119
+"GET /api/v1/apartment/?propertyId=2 HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"GET /api/v1/property/ HTTP/1.1" 200 247
+"OPTIONS /api/v1/users/logout/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/users/logout/ HTTP/1.1" 200 0
+Not Found: /api/v1/users/logout/
+Not Found: /api/v1/users/logout/
+"POST /api/v1/users/logout/ HTTP/1.1" 404 179
+"POST /api/v1/users/logout/ HTTP/1.1" 404 179
+"OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/user/login/ HTTP/1.1" 200 0
+Bad Request: /api/v1/user/login/
+Bad Request: /api/v1/user/login/
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+Bad Request: /api/v1/user/login/
+Bad Request: /api/v1/user/login/
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+Bad Request: /api/v1/user/login/
+Bad Request: /api/v1/user/login/
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+Bad Request: /api/v1/user/register/
+Bad Request: /api/v1/user/register/
+"POST /api/v1/user/register/ HTTP/1.1" 400 194
+"POST /api/v1/user/register/ HTTP/1.1" 400 194
+"POST /api/v1/user/register/ HTTP/1.1" 201 282
+"POST /api/v1/user/register/ HTTP/1.1" 201 282
+"OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/users/login/ HTTP/1.1" 200 0
+Not Found: /api/v1/users/login/
+Not Found: /api/v1/users/login/
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+- Broken pipe from ('127.0.0.1', 53612)
+- Broken pipe from ('127.0.0.1', 53612)
+"GET /api/v1/user/ HTTP/1.1" 200 224
+"GET /api/v1/user/ HTTP/1.1" 200 224
+"GET /api/v1/user/ HTTP/1.1" 200 224
+"GET /api/v1/user/ HTTP/1.1" 200 224
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 123
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 123
+"GET /api/v1/user/ HTTP/1.1" 200 224
+"GET /api/v1/user/ HTTP/1.1" 200 224
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 123
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 123
+Not Found: /api/v1/users/logout/
+Not Found: /api/v1/users/logout/
+"POST /api/v1/users/logout/ HTTP/1.1" 404 179
+"POST /api/v1/users/logout/ HTTP/1.1" 404 179
+Bad Request: /api/v1/user/login/
+Bad Request: /api/v1/user/login/
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+"POST /api/v1/user/login/ HTTP/1.1" 400 32
+"POST /api/v1/user/login/ HTTP/1.1" 200 52
+"POST /api/v1/user/login/ HTTP/1.1" 200 52
+Not Found: /api/v1/users/login/
+Not Found: /api/v1/users/login/
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+Unauthorized: /api/v1/user/
+Unauthorized: /api/v1/user/
+"GET /api/v1/user/ HTTP/1.1" 401 27
+"GET /api/v1/user/ HTTP/1.1" 401 27
+"POST /api/v1/user/login/ HTTP/1.1" 200 52
+"POST /api/v1/user/login/ HTTP/1.1" 200 52
+Not Found: /api/v1/users/login/
+Not Found: /api/v1/users/login/
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"GET /api/v1/user/ HTTP/1.1" 200 216
+"GET /api/v1/user/ HTTP/1.1" 200 216
+Unauthorized: /api/v1/user/
+Unauthorized: /api/v1/user/
+"GET /api/v1/user/ HTTP/1.1" 401 27
+"GET /api/v1/user/ HTTP/1.1" 401 27
+"POST /api/v1/user/register/ HTTP/1.1" 201 276
+"POST /api/v1/user/register/ HTTP/1.1" 201 276
+Not Found: /api/v1/users/login/
+Not Found: /api/v1/users/login/
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"POST /api/v1/users/login/ HTTP/1.1" 404 179
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+- Broken pipe from ('127.0.0.1', 53613)
+- Broken pipe from ('127.0.0.1', 53613)
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/property/ HTTP/1.1" 200 2
+"GET /api/v1/property/ HTTP/1.1" 200 2
+Received POST request data: {'street': '773 N Chicago Ave', 'city': 'Chicago', 'state': 'IL', 'zip': '60110'}
+"POST /api/v1/property/ HTTP/1.1" 201 125
+"POST /api/v1/property/ HTTP/1.1" 201 125
+"OPTIONS /api/v1/apartment/?propertyId=5 HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=5 HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/5/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/5/ HTTP/1.1" 200 0
+"GET /api/v1/apartment/?propertyId=5 HTTP/1.1" 200 2
+"GET /api/v1/apartment/?propertyId=5 HTTP/1.1" 200 2
+"GET /api/v1/property/5/ HTTP/1.1" 200 125
+"GET /api/v1/property/5/ HTTP/1.1" 200 125
+"POST /api/v1/apartment/ HTTP/1.1" 201 120
+"POST /api/v1/apartment/ HTTP/1.1" 201 120
+Bad Request: /api/v1/apartment/
+Bad Request: /api/v1/apartment/
+"POST /api/v1/apartment/ HTTP/1.1" 400 81
+"POST /api/v1/apartment/ HTTP/1.1" 400 81
+- Broken pipe from ('127.0.0.1', 53000)
+- Broken pipe from ('127.0.0.1', 53000)
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/property/5/ HTTP/1.1" 200 125
+"GET /api/v1/property/5/ HTTP/1.1" 200 125
+"GET /api/v1/apartment/?propertyId=5 HTTP/1.1" 200 122
+"GET /api/v1/apartment/?propertyId=5 HTTP/1.1" 200 122
+"GET /api/v1/property/ HTTP/1.1" 200 127
+"GET /api/v1/property/ HTTP/1.1" 200 127
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 244
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 244
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"OPTIONS /api/v1/property/undefined/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=undefined HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=undefined HTTP/1.1" 200 0
+"OPTIONS /api/v1/property/undefined/ HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=undefined HTTP/1.1" 200 0
+"OPTIONS /api/v1/apartment/?propertyId=undefined HTTP/1.1" 200 0
+Not Found: /api/v1/property/undefined/
+Not Found: /api/v1/property/undefined/
+"GET /api/v1/property/undefined/ HTTP/1.1" 404 179
+"GET /api/v1/property/undefined/ HTTP/1.1" 404 179
+Internal Server Error: /api/v1/apartment/
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/apartment_app/views.py", line 18, in get
+    apartments = Apartment.objects.filter(property_id=property_id, property__landlord=request.user)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'undefined'.
+Internal Server Error: /api/v1/apartment/
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/apartment_app/views.py", line 18, in get
+    apartments = Apartment.objects.filter(property_id=property_id, property__landlord=request.user)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'undefined'.
+"GET /api/v1/apartment/?propertyId=undefined HTTP/1.1" 500 145
+"GET /api/v1/apartment/?propertyId=undefined HTTP/1.1" 500 145
+Internal Server Error: /api/v1/apartment/
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/apartment_app/views.py", line 18, in get
+    apartments = Apartment.objects.filter(property_id=property_id, property__landlord=request.user)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'undefined'.
+Internal Server Error: /api/v1/apartment/
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2117, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/evo/default/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/Here/DevOps/capstone/inHome-FullStack/backend/apartment_app/views.py", line 18, in get
+    apartments = Apartment.objects.filter(property_id=property_id, property__landlord=request.user)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1559, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1389, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/evo/default/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2119, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'undefined'.
+"GET /api/v1/apartment/?propertyId=undefined HTTP/1.1" 500 145
+"GET /api/v1/apartment/?propertyId=undefined HTTP/1.1" 500 145
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 244
+"GET /api/v1/apartment/all/ HTTP/1.1" 200 244
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/property/ HTTP/1.1" 200 127
+"GET /api/v1/property/ HTTP/1.1" 200 127
+"GET /api/v1/property/ HTTP/1.1" 200 127
+"GET /api/v1/property/ HTTP/1.1" 200 127
+"GET /api/v1/user/ HTTP/1.1" 200 218
+"GET /api/v1/user/ HTTP/1.1" 200 218

@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    networks:
+      - inHome-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: gunicorn --bind 0.0.0.0:8000 inHome_proj.wsgi:application
+    volumes:
+      - ./backend:/backend
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"  # Map host's 8000 to Gunicorn's 8000
+    networks:
+      - inHome-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - "3000:80"  # Host's port 3000 maps to Nginx's port 80
+    depends_on:
+      - backend
+    networks:
+      - inHome-network
+
+networks:
+  inHome-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
