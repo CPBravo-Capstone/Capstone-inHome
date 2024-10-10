@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { Link, useOutletContext, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { api } from "../utilities";
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 
 
 export default function Register() {
@@ -36,7 +36,6 @@ export default function Register() {
             });
             
             navigate(response.data.role === 'landlord' ? '/manager/' : '/tenant/')
-            window.location.reload()
         } catch (error) {
             console.error('Registration error:', error.response);
         }

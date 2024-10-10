@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import homeLogo from "../assets/ihome.svg";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from '../hooks/useAuth';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -56,7 +55,7 @@ export default function Navbar() {
           {user ? (
             <>
             {user && user.role === 'landlord' && (
-                <Link className="btn m-2" to="manager/properties/">Manage Properties</Link>
+                <Link className="btn m-2" to="/manager/properties/">Manage Properties</Link>
             )}
                       {user && user.role === 'tenant' && (
                 <button 

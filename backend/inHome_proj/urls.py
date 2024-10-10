@@ -16,10 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.http import JsonResponse
+
+
+def test_view(request):
+    return JsonResponse({"message": "Hello, World!"})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/user/', include("user_app.urls")),
     path('api/v1/property/', include("property_app.urls")),
     path('api/v1/apartment/', include("apartment_app.urls")),
+    path('api/v1/test/', test_view), 
 ]

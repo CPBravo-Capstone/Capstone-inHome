@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: inhome-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: swsand/inhome-backend:3.0
+          ports:
+            - containerPort: 8000
+          env:
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: POSTGRES_DB
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_HOST
+              value: "inhome-postgresql-instance.cb2w0g4uwlya.us-east-1.rds.amazonaws.com"
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: inhome-configmap
+                  key: DATABASE_NAME
+            - name: ALLOWED_HOSTS
+              value: "*"
+            - name: DJANGO_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: DJANGO_KEY
+            - name: API_AUTH_ID
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: API_AUTH_ID
+            - name: API_AUTH_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: API_AUTH_TOKEN
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: API_KEY
+          command: ["/bin/bash", "-c", "python manage.py migrate && gunicorn --bind 0.0.0.0:8000 inHome_proj.wsgi:application"]

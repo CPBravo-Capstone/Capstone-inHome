@@ -2,19 +2,23 @@ from rest_framework import serializers
 from .models import Property
 
 class PropertySerializer(serializers.ModelSerializer):
+    landlord = serializers.PrimaryKeyRelatedField(read_only=True)
+
     class Meta:
         model = Property
-        fields = '__all__'  
-        read_only_fields = ('landlord',) 
+        fields = ['id', 'street', 'city', 'state', 'zip', 'vacant', 'landlord']
+        read_only_fields = ['id', 'landlord']
 
     def create(self, validated_data):
-        return Property.objects.create(**validated_data)
+        validated_data['landlord'] = self.context['request'].user
+        return super().create(validated_data)
 
-    def update(self, instance, validated_data):
-        instance.street = validated_data.get('street', instance.street)
-        instance.city = validated_data.get('city', instance.city)
-        instance.state = validated_data.get('state', instance.state)
-        instance.zip = validated_data.get('zip', instance.zip)
-        instance.vacant = validated_data.get('vacant', instance.vacant)
-        instance.save()
-        return instance
+    def validate(self, data):
+        if data.get('state') and len(data['state']) != 2:
+            raise serializers.ValidationError({"state": "State must be a two-letter code."})
+        return data
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['landlord'] = instance.landlord.email
+        return representation

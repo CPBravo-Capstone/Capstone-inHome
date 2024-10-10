@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
-import { Link, useOutletContext, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { useAuth } from "../contexts/AuthContext";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 import { api } from "../utilities";
 
 
@@ -9,7 +8,7 @@ export default function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { login, setUser } = useAuth();
+    const { login } = useAuth();
     // const navigate = useNavigate();
   
     const handleSubmit = async (event) => {
@@ -25,8 +24,7 @@ export default function Login() {
             api.defaults.headers.common["Authorization"] = `Token ${response.data.token}`;
             const userDetailsResponse = await api.get("user/"); 
             if (userDetailsResponse.status === 200) {
-                // console.log(userDetailsResponse.data);
-                window.location.reload()
+                console.log(userDetailsResponse.data);
                 userDetailsResponse.data.role === "landlord" ? window.location.href = '/manager/' : window.location.href = '/tenant/';
                 
             }
@@ -34,7 +32,7 @@ export default function Login() {
             console.error('Login failed', response);
         }
       } catch (error) {
-        // console.log(email, password)
+        console.log(email, password)
         console.error('Login error:', error.response || error);
       }
     };

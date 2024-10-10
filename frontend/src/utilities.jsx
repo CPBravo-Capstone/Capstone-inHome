@@ -1,19 +1,27 @@
 import axios from "axios";
 
+// Since NGINX is handling the API routing, use a relative URL
+const endpoint = "/api/v1/";  // Use a relative path instead of a full URL
+console.log("current endpoint: ", endpoint); 
+
 export const api = axios.create({
-    baseURL: "http://127.0.0.1:8000/api/v1/",
+    baseURL: endpoint,  // This now points to the NGINX proxy
 });
+
+console.log("api base created: ", api);
 
 api.interceptors.request.use(
     config => {
-      const token = localStorage.getItem('token');
-      config.headers.Authorization = token ? `Token ${token}` : '';
-      return config;
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers.Authorization = `Token ${token}`;
+        }
+        return config;
     },
     error => {
-      return Promise.reject(error);
+        return Promise.reject(error);
     }
-  );
+);
 
 export const userLogin = async(email, password) => {
     const response = await api.post("users/login/", { email, password});
@@ -58,4 +66,3 @@ export const userConfirmation = async() => {
         return null
     }
 }
-

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: inhome-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: swsand/inhome-frontend:7.0 
+          ports:
+            - containerPort: 80
+          env:
+            - name: BACKEND_SERVICE_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: BACKEND_SERVICE_HOST
+            - name: BACKEND_SERVICE_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: inhome-secrets
+                  key: BACKEND_SERVICE_PORT
+          livenessProbe: 
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 5
+          volumeMounts:  
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: default.conf 
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-config

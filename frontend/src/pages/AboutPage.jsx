@@ -1,7 +1,3 @@
-// import { useState, useEffect } from "react";
-// import { Link, useOutletContext, useNavigate } from "react-router-dom";
-// import axios from "axios";
-
 import {
   CloudArrowUpIcon,
   LockClosedIcon,

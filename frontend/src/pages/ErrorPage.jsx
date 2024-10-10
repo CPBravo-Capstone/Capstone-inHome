@@ -1,27 +1,6 @@
-
-
-
-// export default function Error()  {
-
-//     return (
-//         <>
-//             <h1> 404: PAGE NOT FOUND </h1>
-//         </>
-//     )
-
-// }
-
 export default function Example() {
     return (
       <>
-        {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full">
-          <body class="h-full">
-          ```
-        */}
         <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
           <div className="text-center">
             <p className="text-2xl font-semibold text-black">404</p>
