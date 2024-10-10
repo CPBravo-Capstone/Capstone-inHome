@@ -1,6 +1,14 @@
 # 🏡 inHome: Scalable Cloud Architecture on AWS
 
-Welcome to **inHome**, a cloud-native application powered by AWS, Kubernetes, Docker, and PostgreSQL. This README provides a high-level overview of the infrastructure components and deployment workflow behind our scalable and resilient architecture.
+Welcome to **inHome**, a cloud-native application powered by AWS, Kubernetes, Docker, and PostgreSQL. This README provides a high-level overview of the infrastructure components and deployment workflow behind our scalable and resilient architecture in the cloud. 
+
+This DevOps Capstone was done with the following team members:
+
+[Errick Basa-Denis](https://github.com/errickbd)
+
+[Jose Sandoval](https://github.com/SWSand)
+
+[Neka Blair](https://github.com/nekablair)
 
 ## APPLICATION ARCHITECTURE
 
